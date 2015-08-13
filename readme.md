@@ -1,5 +1,7 @@
 # GPSOAuthPHP Library
 
+Port of [simon-weber/gpsoauth](https://github.com/simon-weber/gpsoauth) **WIP**
+
 For testing:
 
 ```PHP
