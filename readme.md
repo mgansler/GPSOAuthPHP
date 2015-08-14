@@ -35,7 +35,7 @@ $client_sig = '38918a453d07199354f8b19af05ec6562ced5788'; // for com.google.andr
 $gpsoauth = new GPSOAuthPHP\GPSOAuthPHP([string $proxy = NULL]);
 
 if($master_token = $gpsoauth->performMasterLogin(string $email, string $passwd, string $android_id)) {
-    if($auth = $gpsoauth->performOAuth(string $email, $master_token, $android_id, string $service, string $app, $client_sig, [string $device_country='us', string $operatorCountry='us', string $lang='en', string $sdk_version=17])) {
+    if($auth = $gpsoauth->performOAuth(string $email, $master_token, $android_id, string $service, string $app, $client_sig, [string $device_country='us', string $operatorCountry='us', string $lang='en', string $sdk_version=17])['Auth']) {
         // Do your stuff with Auth-Token
     }
 }
