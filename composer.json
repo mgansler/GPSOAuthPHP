@@ -1,6 +1,6 @@
 {
     "name": "mgansler/GPSOAuthPHP",
     "autoload": {
-        "psr-0": { "GPSOAuthPHP\\": "GPSOAuthPHP/" }
+        "psr-0": { "GPSOAuthPHP\\": "" }
     }
 }
