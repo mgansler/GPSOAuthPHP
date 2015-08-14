@@ -15,8 +15,16 @@ class GPSOAuthPHP
         $this->proxy = $proxy;
     }
 
-    public function performMasterLogin($email, $passwd, $android_id, $service = 'ac2dm', $device_country='us', $operatorCountry='us', $lang='en', $sdk_version=17)
-    {
+    public function performMasterLogin(
+        $email,
+        $passwd,
+        $android_id,
+        $service = 'ac2dm',
+        $device_country='us',
+        $operatorCountry='us',
+        $lang='en',
+        $sdk_version=17
+    ) {
         $data = [
             'accountType' => 'HOSTED_OR_GOOGLE',
             'Email' => $email,
@@ -36,8 +44,18 @@ class GPSOAuthPHP
         return $this->performAuthRequest($data);
     }
 
-    public function performOAuth($email, $master_token, $android_id, $service, $app, $client_sig, $device_country='us', $operatorCountry='us', $lang='en', $sdk_version=17)
-    {
+    public function performOAuth(
+        $email,
+        $master_token,
+        $android_id,
+        $service,
+        $app,
+        $client_sig,
+        $device_country='us',
+        $operatorCountry='us',
+        $lang='en',
+        $sdk_version=17
+    ) {
         $data = [
             'accountType' => 'HOSTED_OR_GOOGLE',
             'Email' => $email,
