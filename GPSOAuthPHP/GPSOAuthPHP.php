@@ -88,7 +88,6 @@ class GPSOAuthPHP
             CURLOPT_RETURNTRANSFER  => true,
             CURLOPT_USERAGENT       => $this->useragent,
             CURLOPT_TIMEOUT         => 10,
-            CURLOPT_SSL_VERIFYPEER  => false,
             CURLOPT_POST            => true,
             CURLOPT_POSTFIELDS      => $this->encodePostfields($data),
         ];
