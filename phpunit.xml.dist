@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         bootstrap='GPSOAuthPHP/tests/bootstrap.php'
+>
+    <testsuites>
+        <testsuite name="GPSOAuthPHP Test Suite">
+            <directory>./GPSOAuthPHP/tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory>./GPSOAuthPHP/src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
