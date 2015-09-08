@@ -4,14 +4,13 @@ namespace GPSOAuthPHP;
 
 class GPSOAuthPHP
 {
-    protected $authUrl;
-    protected $useragent;
+    const AUTH_URL = 'https://android.clients.google.com/auth';
+    const USER_AGENT = 'GPSOAuthPHP/0.1';
+
     protected $proxy;
 
     function __construct($proxy = '')
     {
-        $this->authUrl = "https://android.clients.google.com/auth";
-        $this->useragent = "GPSOAuthPHP/0.1";
         $this->proxy = $proxy;
     }
 
@@ -84,9 +83,9 @@ class GPSOAuthPHP
     private function performAuthRequest(array $data)
     {
         $options = [
-            CURLOPT_URL             => $this->authUrl,
+            CURLOPT_URL             => self::AUTH_URL,
             CURLOPT_RETURNTRANSFER  => true,
-            CURLOPT_USERAGENT       => $this->useragent,
+            CURLOPT_USERAGENT       => self::USER_AGENT,
             CURLOPT_TIMEOUT         => 10,
             CURLOPT_POST            => true,
             CURLOPT_POSTFIELDS      => $this->encodePostfields($data),
