@@ -1,4 +1,4 @@
-# GPSOAuthPHP Library [![build status](https://gitlab.martingansler.de/ci/projects/1/status.png?ref=master](https://gitlab.martingansler.de/ci/projects/1?ref=master)
+# GPSOAuthPHP Library [![build status](https://gitlab.martingansler.de/ci/projects/1/status.png?ref=master)](https://gitlab.martingansler.de/ci/projects/1?ref=master)
 
 Port of [simon-weber/gpsoauth](https://github.com/simon-weber/gpsoauth) **WIP**
 
