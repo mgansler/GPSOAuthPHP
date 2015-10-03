@@ -1,5 +1,4 @@
 default:
   script:
-    - echo 'extension="xdebug.so"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/ci-runner.ini
     - composer install
-    - php vendor/phpunit/phpunit/phpunit --coverage-text | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g"
+    - php -d xdebug.profiler_enable=On vendor/phpunit/phpunit/phpunit --coverage-text | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g"
